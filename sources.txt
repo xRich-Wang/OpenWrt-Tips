@@ -21,4 +21,8 @@ env:
   TZ: Asia/Shanghai
   
   
- 
+git clone "https://github.com/project-openwrt/openwrt.git" --branch "openwrt-19.07" --single-branch "openwrt"
+pushd "openwrt"; ./scripts/feeds update -a; ./scripts/feeds install -a; popd
+
+git clone "https://github.com/Lienol/openwrt.git" --branch "openwrt-19.07" --single-branch "openwrt"
+pushd "openwrt"; ./scripts/feeds update -a; ./scripts/feeds install -a; popd
